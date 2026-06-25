@@ -775,25 +775,49 @@ text("Choose age group:", width/2, 360);
 // knapper
 fill(200);
 
-// 18–33
-if (ageGroup === "18-33") {
+// 18-24
+if (ageGroup === "18-24") {
   fill(0, 140, 255);
 } else {
   fill(200);
 }
-rect(width/2 - 150, 380, 100, 40, 8);
+rect(70, 380, 120, 40, 8);
 fill(0);
-text("18–33", width/2 - 100, 405);
+text("18–24", 130, 405);
 
-// 34–45
-if (ageGroup === "34-45") {
+
+// 25-34
+if (ageGroup === "25-34") {
   fill(0, 140, 255);
 } else {
   fill(200);
 }
-rect(width/2 - 50, 380, 100, 40, 8);
+rect(210, 380, 120, 40, 8);
 fill(0);
-text("34–45", width/2, 405);
+text("25–34", 270, 405);
+
+
+// 35-44
+if (ageGroup === "35-44") {
+  fill(0, 140, 255);
+} else {
+  fill(200);
+}
+rect(350, 380, 120, 40, 8);
+fill(0);
+text("35–44", 410, 405);
+
+
+// 45-54
+if (ageGroup === "45-54") {
+  fill(0, 140, 255);
+} else {
+  fill(200);
+}
+rect(490, 380, 120, 40, 8);
+fill(0);
+text("45–54", 550, 405);
+
 
 // 55+
 if (ageGroup === "55+") {
@@ -801,9 +825,9 @@ if (ageGroup === "55+") {
 } else {
   fill(200);
 }
-rect(width/2 + 50, 380, 100, 40, 8);
+rect(630, 380, 100, 40, 8);
 fill(0);
-text("55+", width/2 + 100, 405);
+text("55+", 680, 405);
 
 fill(0, 140, 255);
 textSize(14);
@@ -934,37 +958,30 @@ console.log("ageGroup før:", ageGroup);
   if (!gameStarted) {
 
 
-  // 18-33
-  if (
-    mouseX > width/2 - 150 &&
-    mouseX < width/2 - 50 &&
-    mouseY > 380 &&
-    mouseY < 420
-  ) {
-    ageGroup = "18-33";
-  }
+  // 18-24
+if(mouseX > 70 && mouseX < 190 && mouseY > 380 && mouseY < 420){
+ ageGroup = "18-24";
+}
 
+// 25-34
+if(mouseX > 210 && mouseX < 330 && mouseY > 380 && mouseY < 420){
+ ageGroup = "25-34";
+}
 
-  // 34-45
-  if (
-    mouseX > width/2 - 50 &&
-    mouseX < width/2 + 50 &&
-    mouseY > 380 &&
-    mouseY < 420
-  ) {
-    ageGroup = "34-45";
-  }
+// 35-44
+if(mouseX > 350 && mouseX < 470 && mouseY > 380 && mouseY < 420){
+ ageGroup = "35-44";
+}
 
+// 45-54
+if(mouseX > 490 && mouseX < 610 && mouseY > 380 && mouseY < 420){
+ ageGroup = "45-54";
+}
 
-  // 55+
-  if (
-    mouseX > width/2 + 50 &&
-    mouseX < width/2 + 150 &&
-    mouseY > 380 &&
-    mouseY < 420
-  ) {
-    ageGroup = "55+";
-  }
+// 55+
+if(mouseX > 630 && mouseX < 730 && mouseY > 380 && mouseY < 420){
+ ageGroup = "55+";
+}
 
   if (!ageGroup) {
   noMessage = "Please select an age group first";
